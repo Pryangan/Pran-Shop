@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@color/orage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <Button
+        android:id="@+id/imageButton"
+        android:layout_width="188dp"
+        android:layout_height="200dp"
+        android:background="@android:color/holo_green_light"
+        android:text="New Request"
+        android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/showOrders"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@android:color/holo_purple"
+        android:text="Show Request"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageButton" />
+
+    <Button
+        android:id="@+id/showVendors"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Show Vendors"
+        android:textSize="30dp"
+        android:layout_below="@+id/imageButton"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/showOrders" />
+
+    <Button
+        android:id="@+id/updateVendors"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Update Vendors"
+        android:textSize="30dp"
+        android:layout_below="@+id/showOrders"
+        android:layout_toEndOf="@+id/showVendors" />
+
+    <Button
+        android:id="@+id/deleteVendors"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@android:color/holo_red_light"
+        android:text="Delete Vendor"
+        android:textSize="30dp"
+        android:layout_below="@+id/showVendors"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/updateVendors" />
+
+            <Button
+                android:id="@+id/deleteRequest"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@android:color/darker_gray"
+                android:text="Delete Request"
+                android:textSize="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/showVendors" />
+        </RelativeLayout>
+    </ScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="11dp"
+        android:src="@mipmap/add_vendor"
+        android:elevation="6dp"
+        android:id="@+id/fab_vendor_add"
+        app:pressedTranslationZ="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
